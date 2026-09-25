@@ -1,0 +1,5 @@
+NEW_BUILDINGS_DATA = {
+}
+
+NEW_BANKS_DATA = {
+}

@@ -1,0 +1,3 @@
+NEW_ARTIFACTS_DATA = {
+}
+

@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "**/UserCampaigns/A3C1/M1": true,
+        "**/UserCampaigns/A3C1/M2": true
+    }
+}
