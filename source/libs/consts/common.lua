@@ -487,3 +487,5 @@ BUILDING_MAGIC_WALL = 7
 ---|`COMPUTER`
 HUMAN = 0
 COMPUTER = 1
+
+__end_import()

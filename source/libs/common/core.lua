@@ -19,27 +19,6 @@ function keys(t)
   return answer
 end
 
-function pcall(func, ...)
-  local ans = {[1] = -1}
-  startThread(
-  function()
-    local ans = %ans
-    errorHook(
-    function()
-      %ans[1] = 0
-      print('<color=blue>This error makes no sense')
-    end)
-    ans[2] = %func(table.unpack(%arg))
-    ans[1] = 1
-  end)
-  while ans[1] == -1 do sleep() end
-  if ans[1] == 1 then
-    return 1, ans[2]
-  else
-    return nil
-  end
-end
-
 ---@param message string
 ---@param as_string 1|nil
 ---@return table
@@ -52,3 +31,5 @@ function rtext(message, as_string)
   end
   return answer
 end
+
+__end_import()

@@ -26,6 +26,9 @@
 			"lowercase-global"
 		],
 		"Lua.diagnostics.libraryFiles": "Enable",
+		"Lua.diagnostics.globals": [
+			"CREATURES_GENERATED_TABLE"
+		],
 		"Lua.workspace.library": [
 			"${workspaceFolder:Mods}/source",
 		],

@@ -165,7 +165,7 @@ Random =
 
   FromTable_IgnoreTable =
   --- Возвращает случайное значение из заданной таблицы, игнорируя заданную таблицу значений
-  ---@param e_tbl <any>[] игнорируемые значения
+  ---@param e_tbl any[] игнорируемые значения
   ---@param tbl table заданная таблица
   ---@return any|nil value случайное значение
   function(e_tbl, tbl)
@@ -177,3 +177,5 @@ Random =
     return answer
   end 
 }
+
+__end_import()

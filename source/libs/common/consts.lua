@@ -23,3 +23,5 @@ RACE_COLORS =
 	"/Text/Default/RaceColors/Fortress.txt",
   "/Text/Default/RaceColors/Stronghold.txt"
 }
+
+__end_import()
