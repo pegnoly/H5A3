@@ -1,0 +1,39 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "A3/UserCampaigns/A3C1/M1",
+			"name": "C1M1"
+		},
+		{
+			"path": "A3/UserCampaigns/A3C1/M2",
+			"name": "C1M2"
+		},
+		{
+			"path": "A3",
+			"name": "data"
+		}
+	],
+	"settings": {
+		"Lua.diagnostics.disable": [
+			"exp-in-action",
+			"unknown-symbol",
+			"miss-symbol",
+			"args-after-dots",
+			"miss-exp",
+			"lowercase-global"
+		],
+		"Lua.diagnostics.libraryFiles": "Enable",
+		"Lua.workspace.library": [
+			"${workspaceFolder:Mods}/source",
+		],
+		"[plaintext]": {
+			"editor.unicodeHighlight.ambiguousCharacters": false,
+			"editor.unicodeHighlight.invisibleCharacters": false,
+			"files.encoding": "utf16le",
+			"editor.wordWrap": "on"
+		}
+	}
+}
