@@ -33,5 +33,7 @@ import("@adv_map/date")
 import("@adv_map/combat")
 import("@adv_map/fight_generation")
 import("@adv_map/mini_dialog")
+import("@adv_map/object")
+import("@adv_map/advmaphero")
 
 __end_import()
