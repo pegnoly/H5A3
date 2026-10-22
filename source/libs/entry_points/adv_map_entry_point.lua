@@ -29,6 +29,7 @@ import("@common/artifact")
 import("@common/hero")
 import("@common/spell")
 
+import("@adv_map/date")
 import("@adv_map/combat")
 import("@adv_map/fight_generation")
 import("@adv_map/mini_dialog")
