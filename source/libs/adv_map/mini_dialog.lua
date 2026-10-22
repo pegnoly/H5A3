@@ -24,11 +24,9 @@ MINI_DIALOG_UNDEFINED_ANSWER = 3
 ---@field label string? Активная метка
 ---@field priority_speaker string|number|nil? 
 
----@class _MiniDialog
+---@class MiniDialog: DefaultClassBody
 ---@field model MiniDialogModel
----@field Start function(label?: string|nil, priority_speaker: string|number)
-
----@alias MiniDialog _MiniDialog | DefaultClassBody
+---@field Start fun(self, label?: string|nil, priority_speaker?: string|number)
 
 ---@param model MiniDialogModel
 ---@return MiniDialog

@@ -23,11 +23,4 @@ function Date()
     return _date
 end
 
-GameTime = {
-    Now = function ()
-        local date = Date()
-        return date
-    end
-}
-
 __end_import()

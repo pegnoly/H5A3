@@ -1,13 +1,13 @@
----@alias UnitCountGenerationMode
----| `UNIT_COUNT_GENERATION_MODE_POWER_BASED`
----| `UNIT_COUNT_GENERATION_MODE_RAW`
-UNIT_COUNT_GENERATION_MODE_POWER_BASED = 0
-UNIT_COUNT_GENERATION_MODE_RAW = 1
+---@alias UnitCalculationType
+---| `POWER_BASED`
+---| `RAW`
+POWER_BASED = 0
+RAW = 1
 
 ---@alias ArmyGetter fun(): Creature
 
 ---@class CombatGenerationModel
----@field stack_count_generation_logic UnitCountGenerationMode []
+---@field stack_count_generation_logic UnitCalculationType []
 ---@field army_base_count_data table<DifficultyLevel, number> []
 ---@field army_counts_grow table<DifficultyLevel, number> []?
 ---@field army_getters ArmyGetter[]
@@ -22,8 +22,8 @@ UNIT_COUNT_GENERATION_MODE_RAW = 1
 
 ---@class _GeneratedCombat
 ---@field generation_model CombatGenerationModel
----@field GenerateArmySlots function(): ArmySlot[]
----@field GenerateHeroSetup function(): FightHeroSetupModel
+---@field GenerateArmySlots fun(self): ArmySlot[]
+---@field GenerateHeroSetup fun(self): FightHeroSetupModel
 
 ---@alias GeneratedCombat _GeneratedCombat | DefaultClassBody
 
@@ -46,15 +46,19 @@ function GeneratedCombat(generation_model)
         local result = {}
         for i, stack_type in self.generation_model.stack_count_generation_logic do
             local creature = self.generation_model.army_getters[i]()
-            if stack_type == UNIT_COUNT_GENERATION_MODE_POWER_BASED then
+            if stack_type == POWER_BASED then
                 local stack_power = self.generation_model.army_base_count_data[i][__difficulty]
-                if self.generation_model.army_counts_grow and length(self.generation_model.army_counts_grow) > 0 then
+                if self.generation_model.army_counts_grow[i] and 
+                    self.generation_model.army_counts_grow[i][__difficulty] and 
+                    self.generation_model.army_counts_grow[i][__difficulty] > 0 then
                     stack_power = stack_power + self.generation_model.army_counts_grow[i][__difficulty] * week
                 end
                 result[i] = ArmySlot(creature.id, ceil(stack_power / creature.power))
             else
                 local count = self.generation_model.army_base_count_data[i][__difficulty]
-                if self.generation_model.army_counts_grow and length(self.generation_model.army_counts_grow) > 0 then
+                if self.generation_model.army_counts_grow[i] and 
+                    self.generation_model.army_counts_grow[i][__difficulty] and 
+                    self.generation_model.army_counts_grow[i][__difficulty] > 0 then
                     count = count + self.generation_model.army_counts_grow[i][__difficulty] * week
                 end
                 result[i] = ArmySlot(creature.id, count)

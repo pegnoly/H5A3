@@ -13,7 +13,7 @@
 ---@alias Hero _Hero | DefaultClassBody
 
 ---@type table<string, Hero>
-HEROES_DATA = {}
+HEROES_DATA = {} 
 
 ---@param id string
 ---@return Hero

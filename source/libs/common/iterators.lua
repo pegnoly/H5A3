@@ -171,7 +171,7 @@ Iterator = function (items)
         ---@param comparer IteratorComparer
         MaxBy = function (comparer)
             local items = %items
-            local current_max_value = math.nan
+            local current_max_value = -9999999
             local current_answer
             for k, v in items do
                 if k and v then
@@ -188,7 +188,7 @@ Iterator = function (items)
         ---@param comparer IteratorComparer
         MinBy = function (comparer)
             local items = %items
-            local current_min_value = math.huge
+            local current_min_value = 10000000
             local current_answer
             for k, v in items do
                 if k and v then
