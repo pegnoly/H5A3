@@ -36,6 +36,12 @@ function AdvMapHero(internal_name)
         return result
     end
 
+    -- IMovable impl
+
+    ---@param position Position
+    function _adv_map_hero:SetPosition(position)
+        SetObjectPosition(self.name, position.x, position.y, position.floor)
+    end
 
     -- IInteractable impl
 
