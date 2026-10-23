@@ -508,6 +508,55 @@
                 </BannedRaces>
             </AdvMapTown>
         </Item>
+        <Item href="#n:inline(AdvMapMonster)" id="item_4821C448-3FE8-4BC2-B3E6-E389CD097679">
+            <AdvMapMonster>
+                <Pos>
+                    <x>55</x>
+                    <y>19</y>
+                    <z>0</z>
+                </Pos>
+                <Rot>0</Rot>
+                <Floor>0</Floor>
+                <Name/>
+                <CombatScript/>
+                <pointLights/>
+                <Shared href="/MapObjects/Random/Random-Monster-L1.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+                <Custom>false</Custom>
+                <Amount>0</Amount>
+                <Amount2>0</Amount2>
+                <AttackType>ATTACK_ANY</AttackType>
+                <MoveType>MOVE_ANY</MoveType>
+                <DoesNotGrow>false</DoesNotGrow>
+                <MessageFileRef href=""/>
+                <Script/>
+                <Resources>
+                    <Wood>0</Wood>
+                    <Ore>0</Ore>
+                    <Mercury>0</Mercury>
+                    <Crystal>0</Crystal>
+                    <Sulfur>0</Sulfur>
+                    <Gem>0</Gem>
+                    <Gold>0</Gold>
+                </Resources>
+                <ArtifactID>ARTIFACT_NONE</ArtifactID>
+                <Mood>MONSTER_MOOD_WILD</Mood>
+                <Courage>MONSTER_COURAGE_ALWAYS_FIGHT</Courage>
+                <AllowQuickCombat>true</AllowQuickCombat>
+                <DoesNotDependOnDifficulty>false</DoesNotDependOnDifficulty>
+                <AdditionalStacks/>
+                <SingleMonsterNameFileRef href=""/>
+                <MultipleMonstersNameFileRef href=""/>
+                <RacesRandomGroupID>0</RacesRandomGroupID>
+                <relationsOverrides/>
+                <RuntimeGenerated>false</RuntimeGenerated>
+                <GeneratedStacksMin>0</GeneratedStacksMin>
+                <GeneratedStacksMax>0</GeneratedStacksMax>
+                <TotalPower>0</TotalPower>
+                <UseAlliedFractions>false</UseAlliedFractions>
+                <MaxTier>0</MaxTier>
+                <InitPriority>0</InitPriority>
+            </AdvMapMonster>
+        </Item>
     </objects>
     <Resources>
         <PointLights>
@@ -574,7 +623,77 @@
             <StartHero>
             </StartHero>
             <HeroInTown>false</HeroInTown>
-            <ReserveHeroes/>
+            <ReserveHeroes>
+                <Item href="#n:inline(AdvMapHero)" id="item_P1_H1">
+                    <AdvMapHero>
+                        <Pos>
+                            <x>0</x>
+                            <y>0</y>
+                            <z>0</z>
+                        </Pos>
+                        <Rot>0</Rot>
+                        <Floor>0</Floor>
+                        <Name/>
+                        <CombatScript/>
+                        <pointLights/>
+                        <Shared href="/mapobjects/haven/godric.(advmapheroshared).xdb#xpointer(/AdvMapHeroShared)"/>
+                        <PlayerID>PLAYER_1</PlayerID>
+                        <Experience>0</Experience>
+                        <armySlots>
+                            <Item>
+                                <Creature>CREATURE_1000</Creature>
+                                <Count>1</Count>
+                            </Item>
+                        </armySlots>
+                        <artifactIDs/>
+                        <isUntransferable/>
+                        <Editable>
+                            <NameFileRef/>
+                            <BiographyFileRef/>
+                            <Offence>0</Offence>
+                            <Defence>0</Defence>
+                            <Spellpower>0</Spellpower>
+                            <Knowledge>0</Knowledge>
+                            <skills>
+                                <Item>
+                                    <Mastery>MASTERY_ADVANCED</Mastery>
+                                    <SkillID>HERO_SKILL_LEARNING</SkillID>
+                                </Item>
+                            </skills>
+                            <perkIDs>
+                                <Item>HERO_SKILL_INTELLIGENCE</Item>
+                                <Item>HERO_SKILL_EAGLE_EYE</Item>
+                                <Item>HERO_SKILL_STUDENT_AWARD</Item>
+                            </perkIDs>
+                            <spellIDs>
+                                <Item>SPELL_LAND_MINE</Item>
+                            </spellIDs>
+                            <Ballista>false</Ballista>
+                            <FirstAidTent>false</FirstAidTent>
+                            <AmmoCart>false</AmmoCart>
+                            <FavoriteEnemies/>
+                            <TalismanLevel/>
+                        </Editable>
+                        <OverrideMask>0</OverrideMask>
+                        <PrimarySkillMastery>MASTERY_ADVANCED</PrimarySkillMastery>
+                        <LossTrigger>
+                            <Action>
+                                <FunctionName/>
+                            </Action>
+                        </LossTrigger>
+                        <AllowQuickCombat>false</AllowQuickCombat>
+                        <Textures>
+                            <Icon128x128/>
+                            <Icon64x64/>
+                            <RoundedFace/>
+                            <LeftFace/>
+                            <RightFace/>
+                        </Textures>
+                        <PresetPrice>0</PresetPrice>
+                        <BannedRaces/>
+                    </AdvMapHero>
+                </Item>
+            </ReserveHeroes>
             <AddHeroTrigger>
                 <Action>
                     <FunctionName>
@@ -1724,7 +1843,85 @@
             </Common>
             <PlayerSpecific>
                 <Item>
-                    <Objectives/>
+                    <Objectives>
+                        <Item>
+                            <Name>MAIN_QUEST</Name>
+                            <CaptionFileRef href="Quests/Primary/Main/name.txt"/>
+                            <ObscureCaptionFileRef href=""/>
+                            <DescriptionFileRef href="Quests/Primary/Main/desc.txt"/>
+                            <ProgressCommentsFileRef>
+                                <Item href="Quests/Primary/Main/Progress/0.txt"/>
+                            </ProgressCommentsFileRef>
+                            <Kind>OBJECTIVE_KIND_MANUAL</Kind>
+                            <Parameters/>
+                            <Timeout>-1</Timeout>
+                            <Holdout>-1</Holdout>
+                            <CheckDelay>-1</CheckDelay>
+                            <Dependencies/>
+                            <InstantVictory>false</InstantVictory>
+                            <TargetGlance>
+                                <Target>
+                                    <Type>ADV_TARGET_NONE</Type>
+                                    <Name/>
+                                    <Coords>
+                                        <FloorID>0</FloorID>
+                                        <cell>
+                                            <x>0</x>
+                                            <y>0</y>
+                                        </cell>
+                                    </Coords>
+                                </Target>
+                                <Radius>10</Radius>
+                                <Duration>5000</Duration>
+                            </TargetGlance>
+                            <Award>
+                                <Type>AWARD_NONE</Type>
+                                <Experience>0</Experience>
+                                <Resources>
+                                    <Wood>0</Wood>
+                                    <Ore>0</Ore>
+                                    <Mercury>0</Mercury>
+                                    <Crystal>0</Crystal>
+                                    <Sulfur>0</Sulfur>
+                                    <Gem>0</Gem>
+                                    <Gold>0</Gold>
+                                </Resources>
+                                <Attribute>HERO_ATTRIB_DEFENCE</Attribute>
+                                <AttributeAmount>0</AttributeAmount>
+                                <ArtifactID>ARTIFACT_NONE</ArtifactID>
+                                <SpellID>SPELL_NONE</SpellID>
+                                <ArmySlot>
+                                    <Creature>CREATURE_UNKNOWN</Creature>
+                                    <Count>0</Count>
+                                </ArmySlot>
+                                <SpellPoints>0</SpellPoints>
+                                <Morale>0</Morale>
+                                <Luck>0</Luck>
+                                <SkillWithMastery>
+                                    <Mastery>MASTERY_NONE</Mastery>
+                                    <SkillID>HERO_SKILL_NONE</SkillID>
+                                </SkillWithMastery>
+                            </Award>
+                            <TakeContribution>false</TakeContribution>
+                            <CanUncomplete>false</CanUncomplete>
+                            <IsInitialyActive>false</IsInitialyActive>
+                            <IsInitialyVisible>false</IsInitialyVisible>
+                            <IsHidden>false</IsHidden>
+                            <Ignore>false</Ignore>
+                            <ShowCompleted>false</ShowCompleted>
+                            <NeedComplete>false</NeedComplete>
+                            <StateChangeTrigger>
+                                <Action>
+                                    <FunctionName/>
+                                </Action>
+                            </StateChangeTrigger>
+                            <SoundActivated/>
+                            <SoundComplete/>
+                            <SoundFailed/>
+                            <AllowMultipleActivations>false</AllowMultipleActivations>
+                            <AllowMultipleCompletions>false</AllowMultipleCompletions>
+                        </Item>
+                    </Objectives>
                     <DieInWeekWithoutTowns>true</DieInWeekWithoutTowns>
                 </Item>
                 <Item>
