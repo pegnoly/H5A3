@@ -14,10 +14,6 @@
 		{
 			"path": "A3",
 			"name": "data"
-		},
-		{
-			"path": "../../Mods/TechMap",
-			"name": "Tech"
 		}
 	],
 	"settings": {
