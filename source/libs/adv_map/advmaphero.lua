@@ -1,6 +1,8 @@
 ---@class AdvMapHeroBase: Object
 ---@field data Hero
 ---@field IsAlive fun(self): 1|nil|boolean
+---@field EnableAI fun(self)
+---@field DisableAI fun(self)
 ---@field EngageCombat fun(self, enemy: string|nil, army: ArmySlot[], is_quick?: string|nil, arena?: string|nil): 1|nil|boolean
 
 ---@alias AdvMapHero AdvMapHeroBase | IMovable | IInteractable | IArmyContainer
