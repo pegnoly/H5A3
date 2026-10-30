@@ -35,5 +35,10 @@ import("@adv_map/fight_generation")
 import("@adv_map/mini_dialog")
 import("@adv_map/object")
 import("@adv_map/advmaphero")
+import"@adv_map/region"
+
+import"@adv_map/events/base"
+import"@adv_map/events/newday"
+import"@adv_map/events/enterregion"
 
 __end_import()
