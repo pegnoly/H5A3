@@ -1,1 +1,2 @@
 ---@alias NumberOrString number|string
+---@alias bool boolean|1|nil
